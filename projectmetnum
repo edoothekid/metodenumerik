@@ -12,7 +12,6 @@
             background: #f2f6ff;
         }
 
-        /* HEADER */
         header {
             background: white;
             padding: 15px 40px;
@@ -20,9 +19,6 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 10;
         }
 
         header .logo {
@@ -42,9 +38,8 @@
             color: #0074ff;
         }
 
-        /* HERO SECTION */
         .hero {
-            background: linear-gradient(#0074ffcc, #005bd8cc), url('https://picsum.photos/2000/1200?blur=3');
+            background: linear-gradient(#0074ffcc, #005bd8cc), url('https://picsum.photos/2000/1200?blur=4');
             background-size: cover;
             background-position: center;
             padding: 120px 40px;
@@ -77,11 +72,6 @@
             font-weight: bold;
         }
 
-        .hero button:hover {
-            background: #e3e3e3;
-        }
-
-        /* FITUR SECTION */
         .fitur-wrapper {
             display: flex;
             justify-content: center;
@@ -104,14 +94,7 @@
             margin-bottom: 10px;
         }
 
-        .fitur-box p {
-            color: #444;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
         footer {
-            margin-top: 40px;
             background: #0074ff;
             color: white;
             padding: 25px;
@@ -121,7 +104,6 @@
 </head>
 <body>
 
-    <!-- HEADER -->
     <header>
         <div class="logo">BelajarKu</div>
         <nav>
@@ -132,28 +114,26 @@
         </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero">
-        <h1>Belajar Di Mana Saja & Kapan Saja Dengan Mudah</h1>
-        <p>Platform pembelajaran modern yang membantu siswa, guru, dan masyarakat untuk belajar dengan cara yang lebih efektif dan fleksibel.</p>
+        <h1>Belajar Mudah, Kapan Saja & Di Mana Saja</h1>
+        <p>Platform pembelajaran interaktif untuk siswa dan guru, dengan materi, video, dan latihan yang selalu siap dipelajari.</p>
         <button>Mulai Belajar</button>
     </section>
 
-    <!-- FITUR -->
     <section class="fitur-wrapper">
         <div class="fitur-box">
             <h3>Materi Lengkap</h3>
-            <p>Akses ratusan materi dengan tampilan interaktif dan mudah dipahami.</p>
+            <p>Akses banyak materi interaktif dengan penjelasan ringkas dan mudah dipahami.</p>
         </div>
 
         <div class="fitur-box">
-            <h3>Kelas Online</h3>
-            <p>Ikuti kelas daring dari pengajar berpengalaman di berbagai bidang.</p>
+            <h3>Kelas Daring</h3>
+            <p>Ikuti pembelajaran jarak jauh dari pengajar yang berpengalaman.</p>
         </div>
 
         <div class="fitur-box">
             <h3>Video Pembelajaran</h3>
-            <p>Nikmati video pembelajaran berkualitas tinggi kapan pun dan di mana pun.</p>
+            <p>Tonton video berkualitas tinggi, kapan saja sesuai kebutuhan.</p>
         </div>
     </section>
 
