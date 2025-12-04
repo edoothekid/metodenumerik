@@ -344,47 +344,35 @@ P(x) = f[x₀]
 
     </div>
 
-    <!-- TENTANG PENULIS -->
-<section id="penulis" class="section card" aria-labelledby="penulis-heading">
-    <h2 id="penulis-heading">Tentang Penulis</h2>
+   <!-- TENTANG PENULIS -->
+<div id="penulis" class="container section">
+    <h2>Tentang Penulis</h2>
 
-    <!-- Penulis 1 -->
-    <div style="display:flex;align-items:center;gap:20px;margin-bottom:26px;">
-        <img src="https://api.dicebear.com/8.x/initials/svg?seed=Alfredho%20Fathurrahman%20Rizquna%20Ahmadi&backgroundColor=1e3a8a&fontColor=ffffff"
-             alt="Foto Alfredho"
-             style="width:90px;height:90px;border-radius:12px;border:1px solid rgba(110,168,255,0.25);box-shadow:0 6px 20px rgba(20,40,80,0.4);">
-
+    <!-- Author 1 -->
+    <div class="author-box">
+        <img src="author1.jpg" alt="Foto Alfredho" class="author-photo">
         <div>
-            <p style="margin:0;font-size:20px;font-weight:700;color:#9cc2ff;">
-                Alfredho Fathurrahman Rizquna Ahmadi
-            </p>
-            <p style="margin:4px 0;color:#e9f4ff;">
-                Mahasiswa Pendidikan Matematika UNS
-            </p>
-            <p style="margin:0;color:#d1e6ff;">
-                Memiliki minat dalam pembelajaran matematika modern, pengembangan media digital,
-                serta integrasi teknologi dalam proses pembelajaran numerik.
+            <h3>Alfredho Fathurrahman Rizquna Ahmadi</h3>
+            <p>
+                Mahasiswa Pendidikan Matematika UNS yang memiliki minat pada 
+                pengembangan media pembelajaran berbasis teknologi. 
+                Aktif dalam pembuatan modul ajar, penyusunan perangkat ajar digital, 
+                dan pengembangan konten visual interaktif untuk pembelajaran matematika.
             </p>
         </div>
     </div>
 
-    <!-- Penulis 2 -->
-    <div style="display:flex;align-items:center;gap:20px;">
-        <img src="https://api.dicebear.com/8.x/initials/svg?seed=Galih%20Wicaksono&backgroundColor=1e3a8a&fontColor=ffffff"
-             alt="Foto Galih"
-             style="width:90px;height:90px;border-radius:12px;border:1px solid rgba(110,168,255,0.25);box-shadow:0 6px 20px rgba(20,40,80,0.4);">
-
+    <!-- Author 2 -->
+    <div class="author-box">
+        <img src="author2.png" alt="Foto Galih Wicaksono" class="author-photo">
         <div>
-            <p style="margin:0;font-size:20px;font-weight:700;color:#9cc2ff;">
-                Galih Wicaksono
-            </p>
-            <p style="margin:4px 0;color:#e9f4ff;">
-                Mahasiswa Pendidikan Matematika UNS
-            </p>
-            <p style="margin:0;color:#d1e6ff;">
-                Fokus pada penelitian pembelajaran matematika, analisis data kuantitatif-kualitatif,
-                dan pengembangan materi ajar yang interaktif dan mudah diakses siswa.
+            <h3>Galih Wicaksono</h3>
+            <p>
+                Mahasiswa Pendidikan Matematika UNS yang fokus dalam penelitian 
+                pembelajaran, analisis data pendidikan, serta penerapan metode 
+                numerik dalam pemecahan masalah matematika. 
+                Aktif mengembangkan bahan ajar dan tutorial matematika terstruktur.
             </p>
         </div>
     </div>
-</section>
+</div>
