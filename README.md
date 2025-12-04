@@ -350,7 +350,8 @@ P(x) = f[x₀]
 
     <!-- Author 1 -->
     <div class="author-box">
-        <img src="author1.jpg" alt="Foto Alfredho" class="author-photo">
+    <img src="author1.jpg" alt="Foto Alfredho Fathurrahman Rizquna Ahmadi" class="author-photo">
+
         <div>
             <h3>Alfredho Fathurrahman Rizquna Ahmadi</h3>
             <p>
