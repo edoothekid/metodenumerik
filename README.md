@@ -6,6 +6,37 @@
 <title>Metode Numerik • Futuristik (Biru Neon)</title>
 
 <style>
+        .author-card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: #1e1e1e;
+        padding: 20px;
+        border-radius: 14px;
+        margin-bottom: 20px;
+        border: 1px solid #333;
+    }
+    
+    .author-photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 2px solid #444;
+    }
+    
+    .author-info h3 {
+        margin: 0;
+        font-size: 20px;
+        color: #fff;
+    }
+    
+    .author-info p {
+        margin: 2px 0;
+        color: #ccc;
+        font-size: 15px;
+    }
+
     /* ---------------------------
        GLOBAL: DARK FUTURISTIC (A)
        --------------------------- */
@@ -344,36 +375,29 @@ P(x) = f[x₀]
 
     </div>
 
-   <!-- TENTANG PENULIS -->
+<!-- PENULIS -->
 <div id="penulis" class="container section">
+
     <h2>Tentang Penulis</h2>
 
-    <!-- Author 1 -->
-    <div class="author-box">
-    <img src="author1.jpg" alt="Foto Alfredho Fathurrahman Rizquna Ahmadi" class="author-photo">
-
-        <div>
+    <!-- Penulis 1 -->
+    <div class="author-card">
+        <img src="author1.jpg" class="author-photo">
+        <div class="author-info">
             <h3>Alfredho Fathurrahman Rizquna Ahmadi</h3>
-            <p>
-                Mahasiswa Pendidikan Matematika UNS yang memiliki minat pada 
-                pengembangan media pembelajaran berbasis teknologi. 
-                Aktif dalam pembuatan modul ajar, penyusunan perangkat ajar digital, 
-                dan pengembangan konten visual interaktif untuk pembelajaran matematika.
-            </p>
+            <p>Mahasiswa Pendidikan Matematika – Universitas Sebelas Maret</p>
+            <p>Fokus pada pengembangan media pembelajaran matematika berbasis teknologi.</p>
         </div>
     </div>
 
-    <!-- Author 2 -->
-    <div class="author-box">
-        <img src="author2.png" alt="Foto Galih Wicaksono" class="author-photo">
-        <div>
+    <!-- Penulis 2 -->
+    <div class="author-card">
+        <img src="author2.jpg" class="author-photo">
+        <div class="author-info">
             <h3>Galih Wicaksono</h3>
-            <p>
-                Mahasiswa Pendidikan Matematika UNS yang fokus dalam penelitian 
-                pembelajaran, analisis data pendidikan, serta penerapan metode 
-                numerik dalam pemecahan masalah matematika. 
-                Aktif mengembangkan bahan ajar dan tutorial matematika terstruktur.
-            </p>
+            <p>Mahasiswa Pendidikan Matematika – Universitas Sebelas Maret</p>
+            <p>Memiliki minat pada metode numerik, pemrograman, dan desain sistem pembelajaran digital.</p>
         </div>
     </div>
+
 </div>
