@@ -1,180 +1,121 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", sans-serif;
-            background: linear-gradient(135deg, #6a5af9, #3b82f6);
-            color: #222;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #617BFF, #4E5DFF);
+        color: #111;
+    }
 
-        header {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(6px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 40px;
-            position: sticky;
-            top: 0;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            z-index: 10;
-        }
+    /* NAVBAR */
+    .navbar {
+        background: #ffffffdd;
+        backdrop-filter: blur(5px);
+        padding: 18px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        .logo {
-            font-weight: bold;
-            font-size: 18px;
-        }
+    .logo {
+        height: 40px;
+    }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #222;
-            font-size: 15px;
-            cursor: pointer;
-        }
+    .nav-right {
+        display: flex;
+        gap: 30px;
+        font-size: 18px;
+        font-weight: 600;
+    }
 
-        .btn {
-            background: linear-gradient(90deg, #6a5af9, #3b82f6);
-            padding: 10px 20px;
-            border-radius: 25px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
+    .nav-right a {
+        color: #222;
+        text-decoration: none;
+    }
 
-        .section {
-            display: none;
-            background: white;
-            width: 85%;
-            margin: 50px auto;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
+    .nav-right a:hover {
+        color: #4E5DFF;
+    }
 
-        .active {
-            display: block;
-        }
+    /* CONTENT WRAPPER */
+    .container {
+        max-width: 1100px;
+        margin: 70px auto;
+        background: #ffffffee;
+        padding: 40px;
+        border-radius: 18px;
+        backdrop-filter: blur(3px);
+    }
 
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* SECTION HIDE + SHOW */
+    .section {
+        display: none;
+    }
 
-        .hero-text {
-            width: 50%;
-        }
+    .section.active {
+        display: block;
+    }
 
-        .hero-text h1 {
-            font-size: 40px;
-            color: #2a2a7a;
-            margin-bottom: 10px;
-        }
+    h2 {
+        color: #2d2da8;
+        margin-bottom: 10px;
+    }
+</style>
 
-        .hero img {
-            width: 42%;
-            border-radius: 10px;
-        }
+<script>
+function tampilkan(id){
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
 
-        h2 {
-            color: #2a2a7a;
-        }
-
-        p {
-            line-height: 1.7;
-            color: #444;
-        }
-    </style>
 </head>
-
 <body>
 
-    <!-- NAVIGATION -->
-    <header>
-        <div class="logo">LOGO</div>
-        <nav>
-            <a onclick="show('home')">Home</a>
-            <a onclick="show('materi')">Materi</a>
-            <a onclick="show('penulis')">Tentang Penulis</a>
-        </nav>
-        <a class="btn">Mulai</a>
-    </header>
+<!-- NAVBAR -->
+<div class="navbar">
+    <img src="logo.png" class="logo"> <!-- GANTI LOGO DI SINI -->
 
-    <!-- SECTION: HOME -->
-    <section id="home" class="section active">
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Portal Belajar Online</h1>
-                <p>
-                    Selamat datang di platform pembelajaran ringkas, interaktif, 
-                    dan mudah dipahami. Klik menu Materi untuk mulai belajar.
-                </p>
-                <a onclick="show('materi')" class="btn" style="cursor:pointer;">Pelajari Lebih Lanjut</a>
-            </div>
+    <div class="nav-right">
+        <a href="#" onclick="tampilkan('home')">Home</a>
+        <a href="#" onclick="tampilkan('materi')">Materi</a>
+        <a href="#" onclick="tampilkan('penulis')">Tentang Penulis</a>
+    </div>
+</div>
 
-            <img src="https://via.placeholder.com/450x300/6a5af9/ffffff?text=Ilustrasi" alt="Ilustrasi">
-        </div>
-    </section>
+<!-- HOME -->
+<div id="home" class="container section active">
+    <h2>Selamat Datang</h2>
+    <p>Ini adalah landing page sederhana untuk pembelajaran metode numerik.</p>
+</div>
 
-    <!-- SECTION: MATERI -->
-    <section id="materi" class="section">
-        <h2>Interpolasi Beda Bagi Newton</h2>
-        <p>
-            Interpolasi Newton menggunakan tabel selisih hingga (difference table) untuk membangun polinom interpolasi.  
-            Metode ini efektif ketika titik-titik data memiliki jarak yang sama (equal spacing).
-        </p>
+<!-- MATERI -->
+<div id="materi" class="container section">
+    <h2>Interpolasi Beda Bagi Newton</h2>
+    <p>
+        Interpolasi Newton menggunakan tabel selisih hingga (divided differences)
+        untuk membangun polinom interpolasi.  
+        Rumus umumnya adalah:
+    </p>
 
-        <h3>Rumus Dasar</h3>
-        <p>
-            Rumus interpolasi Newton maju:
-        </p>
+    <p><b>P(x) = f[x₀] + f[x₀,x₁](x-x₀) + f[x₀,x₁,x₂](x-x₀)(x-x₁) + ...</b></p>
 
-        <pre>
-P(x) = f(x₀) 
-     + u Δf(x₀)
-     + u(u−1)/2! Δ²f(x₀)
-     + u(u−1)(u−2)/3! Δ³f(x₀)
-     + ... 
-dengan u = (x − x₀)/h
-        </pre>
+    <p>Materi lengkap dapat Anda kembangkan di bagian ini.</p>
+</div>
 
-        <p>
-            Metode ini sangat cocok untuk mencari nilai taksiran dari suatu fungsi berdasarkan data tabel.
-        </p>
-    </section>
-
-    <!-- SECTION: PENULIS -->
-    <section id="penulis" class="section">
-        <h2>Tentang Penulis</h2>
-        <p>
-            <b>Nama:</b> Edo The Kid  
-            <br>
-            <b>Bidang:</b> Pendidikan Matematika & Teknologi Pembelajaran  
-            <br>
-            <b>Minat:</b> Metode Numerik, Pemrograman, Media Pembelajaran Digital  
-            <br><br>
-            Penulis adalah mahasiswa yang memiliki ketertarikan dalam pengembangan media pembelajaran berbasis web 
-            serta implementasi metode numerik dalam pendidikan matematika.
-        </p>
-    </section>
-
-    <script>
-        function show(id) {
-            document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active"));
-            document.getElementById(id).classList.add("active");
-
-            // scroll ke atas halus
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+<!-- PENULIS -->
+<div id="penulis" class="container section">
+    <h2>Tentang Penulis</h2>
+    <p>Nama: ——— (isi sendiri)</p>
+    <p>Mahasiswa/Profesi: ———</p>
+    <p>Deskripsi singkat mengenai pengalaman, bidang, dan kontak penulis.</p>
+</div>
 
 </body>
 </html>
