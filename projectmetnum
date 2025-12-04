@@ -1,10 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Website Sederhana</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda – Website Belajar</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f6ff;
+        }
+
+        /* HEADER */
+        header {
+            background: white;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #0074ff;
+        }
+
+        nav a {
+            margin-left: 25px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #0074ff;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(#0074ffcc, #005bd8cc), url('https://picsum.photos/2000/1200?blur=3');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 40px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .hero button {
+            margin-top: 25px;
+            padding: 14px 35px;
+            font-size: 17px;
+            border: none;
+            background: white;
+            color: #005bd8;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero button:hover {
+            background: #e3e3e3;
+        }
+
+        /* FITUR SECTION */
+        .fitur-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 60px 40px;
+            flex-wrap: wrap;
+        }
+
+        .fitur-box {
+            background: white;
+            width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .fitur-box h3 {
+            color: #005bd8;
+            margin-bottom: 10px;
+        }
+
+        .fitur-box p {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #0074ff;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Halo! Ini website pertamaku.</h1>
-    <p>Dibuat menggunakan GitHub Pages.</p>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">BelajarKu</div>
+        <nav>
+            <a href="#">Beranda</a>
+            <a href="#">Kursus</a>
+            <a href="#">Tentang</a>
+            <a href="#">Kontak</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Belajar Di Mana Saja & Kapan Saja Dengan Mudah</h1>
+        <p>Platform pembelajaran modern yang membantu siswa, guru, dan masyarakat untuk belajar dengan cara yang lebih efektif dan fleksibel.</p>
+        <button>Mulai Belajar</button>
+    </section>
+
+    <!-- FITUR -->
+    <section class="fitur-wrapper">
+        <div class="fitur-box">
+            <h3>Materi Lengkap</h3>
+            <p>Akses ratusan materi dengan tampilan interaktif dan mudah dipahami.</p>
+        </div>
+
+        <div class="fitur-box">
+            <h3>Kelas Online</h3>
+            <p>Ikuti kelas daring dari pengajar berpengalaman di berbagai bidang.</p>
+        </div>
+
+        <div class="fitur-box">
+            <h3>Video Pembelajaran</h3>
+            <p>Nikmati video pembelajaran berkualitas tinggi kapan pun dan di mana pun.</p>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 BelajarKu – Semua Hak Dilindungi
+    </footer>
+
 </body>
 </html>
