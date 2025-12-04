@@ -1,70 +1,144 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <title>Interpolasi Beda Bagi Newton</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Metode Numerik</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Segoe UI", sans-serif;
-            background: radial-gradient(circle at center, #0b0f19, #05060a 70%);
-            color: #e8ecff;
-        }
+<style>
+    /* ====== GLOBAL FUTURISTIC STYLE ====== */
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: radial-gradient(circle at center, #0b0f19, #05060a 70%);
+        color: #e8ecff;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: auto;
-        }
+    a {
+        color: #b7c8ff;
+        text-decoration: none;
+    }
 
-        .section {
-            margin-top: 60px;
-        }
+    /* ====== NAVBAR ====== */
+    .navbar {
+        background: rgba(20, 20, 40, 0.6);
+        border-bottom: 1px solid rgba(120, 150, 255, 0.4);
+        box-shadow: 0 0 14px rgba(120,150,255,0.35);
+        backdrop-filter: blur(10px);
+        padding: 18px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
 
-        /* ===== FUTURISTIC CARD ===== */
-        .futuristic-card {
-            background: rgba(20, 20, 40, 0.65);
-            border: 1px solid rgba(120, 150, 255, 0.45);
-            border-radius: 16px;
-            padding: 28px;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 0 25px rgba(100, 150, 255, 0.25);
-        }
+    .logo {
+        font-size: 26px;
+        font-weight: 700;
+        color: #c9d6ff;
+        text-shadow: 0 0 10px rgba(160, 180, 255, 0.8);
+    }
 
-        /* Judul Futuristik */
-        .futuristic-card h2, 
-        .futuristic-card h3 {
-            color: #9bb8ff;
-            text-shadow: 0 0 12px rgba(120, 150, 255, 0.8);
-        }
+    .nav-right {
+        display: flex;
+        gap: 30px;
+        font-size: 18px;
+        font-weight: 600;
+    }
 
-        /* Teks */
-        .futuristic-card p, 
-        .futuristic-card ul li {
-            color: #e8ecff;
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
+    .nav-right a:hover {
+        color: #6e8fff;
+        text-shadow: 0 0 6px rgba(100,150,255,0.8);
+    }
 
-        /* Box kode */
-        .futuristic-pre {
-            background: rgba(50, 60, 100, 0.4);
-            border: 1px solid rgba(120, 150, 255, 0.4);
-            padding: 14px;
-            border-radius: 10px;
-            color: #e0e6ff;
-            font-size: 0.95rem;
-            overflow-x: auto;
-        }
-    </style>
+    /* ====== PAGE CONTAINER ====== */
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 70px auto;
+    }
+
+    .section {
+        display: none;
+    }
+
+    .section.active {
+        display: block;
+        animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== FUTURISTIC CARD ===== */
+    .futuristic-card {
+        background: rgba(20, 20, 40, 0.65);
+        border: 1px solid rgba(120, 150, 255, 0.45);
+        border-radius: 16px;
+        padding: 28px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 0 25px rgba(100, 150, 255, 0.25);
+    }
+
+    .futuristic-card h2,
+    .futuristic-card h3 {
+        color: #9bb8ff;
+        text-shadow: 0 0 12px rgba(120,150,255,0.8);
+    }
+
+    p, li {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #e8ecff;
+    }
+
+    .futuristic-pre {
+        background: rgba(50,60,100,0.4);
+        border: 1px solid rgba(120,150,255,0.4);
+        padding: 14px;
+        border-radius: 10px;
+        color: #e0e6ff;
+        font-size: 0.95rem;
+        overflow-x: auto;
+    }
+</style>
+
+<script>
+function tampilkan(id){
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
 </head>
 
 <body>
 
-<!-- MATERI -->
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">Metode Numerik</div>
+
+    <div class="nav-right">
+        <a href="#" onclick="tampilkan('home')">Home</a>
+        <a href="#" onclick="tampilkan('materi')">Materi</a>
+        <a href="#" onclick="tampilkan('penulis')">Tentang Penulis</a>
+    </div>
+</div>
+
+<!-- HOME -->
+<div id="home" class="container section active futuristic-card">
+    <h2>Selamat Datang</h2>
+    <p>
+        Ini adalah landing page futuristik untuk pembelajaran metode numerik,
+        berisi materi lengkap dan interaktif, disajikan dengan desain modern
+        dan mudah dipahami.
+    </p>
+</div>
+
+<!-- MATERI (Tetap sesuai permintaan Anda) -->
 <div id="materi" class="container section futuristic-card">
     <h2>Interpolasi Beda Bagi Newton</h2>
 
@@ -189,6 +263,14 @@ P(x) = f[x₀]
         fleksibel, dan sangat berguna dalam penyelesaian numerik
         ketika titik-titik data tidak berjarak sama.
     </p>
+</div>
+
+<!-- TENTANG PENULIS -->
+<div id="penulis" class="container section futuristic-card">
+    <h2>Tentang Penulis</h2>
+    <p>Nama: ——— (isi sendiri)</p>
+    <p>Mahasiswa/Profesi: ———</p>
+    <p>Deskripsi singkat mengenai pengalaman, bidang, dan kontak penulis.</p>
 </div>
 
 </body>
