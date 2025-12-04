@@ -3,143 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda – Website Belajar</title>
+    <title>Beranda Metode Numerik</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #f2f6ff;
+            background: #0b6bc8; /* Biru */
+            color: white;
         }
 
-        header {
-            background: white;
-            padding: 15px 40px;
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 40px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            position: fixed;
+            width: 100%;
         }
 
-        header .logo {
+        .navbar .logo {
             font-size: 22px;
             font-weight: bold;
-            color: #0074ff;
         }
 
-        nav a {
-            margin-left: 25px;
-            color: #333;
+        .navbar nav a {
+            margin-left: 20px;
+            color: white;
             text-decoration: none;
             font-weight: 500;
         }
 
-        nav a:hover {
-            color: #0074ff;
-        }
-
         .hero {
-            background: linear-gradient(#0074ffcc, #005bd8cc), url('https://picsum.photos/2000/1200?blur=4');
-            background-size: cover;
-            background-position: center;
-            padding: 120px 40px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            color: white;
+            padding: 0 20px;
         }
 
         .hero h1 {
-            font-size: 45px;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.6;
-        }
-
-        .hero button {
-            margin-top: 25px;
-            padding: 14px 35px;
-            font-size: 17px;
-            border: none;
-            background: white;
-            color: #005bd8;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .fitur-wrapper {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 60px 40px;
-            flex-wrap: wrap;
-        }
-
-        .fitur-box {
-            background: white;
-            width: 280px;
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-        }
-
-        .fitur-box h3 {
-            color: #005bd8;
+            font-size: 50px;
             margin-bottom: 10px;
         }
 
-        footer {
-            background: #0074ff;
-            color: white;
-            padding: 25px;
-            text-align: center;
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cta {
+            padding: 12px 24px;
+            background: white;
+            color: #0b6bc8;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
         }
     </style>
 </head>
-<body>
 
-    <header>
-        <div class="logo">BelajarKu</div>
+<body>
+    <header class="navbar">
+        <div class="logo">Metode Numerik</div>
         <nav>
             <a href="#">Beranda</a>
-            <a href="#">Kursus</a>
-            <a href="#">Tentang</a>
+            <a href="#">Materi</a>
+            <a href="#">Tugas</a>
             <a href="#">Kontak</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Belajar Mudah, Kapan Saja & Di Mana Saja</h1>
-        <p>Platform pembelajaran interaktif untuk siswa dan guru, dengan materi, video, dan latihan yang selalu siap dipelajari.</p>
-        <button>Mulai Belajar</button>
+        <h1>Selamat Datang</h1>
+        <p>Website Metode Numerik Universitas</p>
+        <a class="cta" href="#">Mulai Belajar</a>
     </section>
-
-    <section class="fitur-wrapper">
-        <div class="fitur-box">
-            <h3>Materi Lengkap</h3>
-            <p>Akses banyak materi interaktif dengan penjelasan ringkas dan mudah dipahami.</p>
-        </div>
-
-        <div class="fitur-box">
-            <h3>Kelas Daring</h3>
-            <p>Ikuti pembelajaran jarak jauh dari pengajar yang berpengalaman.</p>
-        </div>
-
-        <div class="fitur-box">
-            <h3>Video Pembelajaran</h3>
-            <p>Tonton video berkualitas tinggi, kapan saja sesuai kebutuhan.</p>
-        </div>
-    </section>
-
-    <footer>
-        © 2025 BelajarKu – Semua Hak Dilindungi
-    </footer>
-
 </body>
 </html>
