@@ -5,6 +5,10 @@
 <title>Metode Numerik • Futuristik (Biru Neon)</title>
 
 <style>
+        #home p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
         .author-card {
         display: flex;
         align-items: center;
