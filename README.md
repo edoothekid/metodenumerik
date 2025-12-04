@@ -218,6 +218,14 @@
 </head>
 <body>
 
+<!-- NAVBAR -->
+    <div class="nav-right" role="navigation" aria-label="Main navigation">
+        <a href="#" onclick="tampilkan('home'); return false;">Home</a>
+        <a href="#" onclick="tampilkan('materi'); return false;">Materi</a>
+        <a href="#" onclick="tampilkan('penulis'); return false;">Tentang Penulis</a>
+    </div>
+</div>
+
 <!-- MAIN -->
 <main class="main-wrap">
 
