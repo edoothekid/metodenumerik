@@ -281,13 +281,6 @@
 
         <h3>2. Definisi Beda Bagi</h3>
 
-        <p><b>Beda bagi orde 0:</b></p>
-        <pre style="background:#eef;padding:12px;border-radius:8px;">
-f[x₀] = f(x₀)
-f[x₁] = f(x₁)
-...
-        </pre>
-
         <p><b>Beda bagi orde 1:</b></p>
         <pre style="background:#eef;padding:12px;border-radius:8px;">
 f[x₀, x₁] = ( f(x₁) - f(x₀) ) / ( x₁ - x₀ )
@@ -310,12 +303,8 @@ f[x₀, x₁, ..., xₙ] = ( f[x₁, ..., xₙ] - f[x₀, ..., xₙ₋₁] ) / (
         </p>
 
         <pre style="background:#eef;padding:12px;border-radius:8px;">
-P(x) = 
-f[x₀]
-+ f[x₀,x₁](x - x₀)
-+ f[x₀,x₁,x₂](x - x₀)(x - x₁)
-+ ...
-+ f[x₀,x₁,...,xₙ](x - x₀)(x - x₁)...(x - xₙ₋₁)
+P(x) = f[x₀] + f[x₀,x₁](x - x₀) + f[x₀,x₁,x₂](x - x₀)(x - x₁) + ... 
+       + f[x₀,x₁,...,xₙ](x - x₀)(x - x₁)...(x - xₙ₋₁)
         </pre>
 
         <h3>4. Contoh Tabel Beda Bagi</h3>
@@ -323,8 +312,8 @@ f[x₀]
         <p>Misalkan tabel data:</p>
 
         <pre style="background:#eef;padding:12px;border-radius:8px;">
-x : 1   2   4
-f : 1   4   16
+x       : 1   2   4
+f(x)    : 1   4   16
         </pre>
 
         <p>Buat tabel beda bagi:</p>
