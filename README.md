@@ -97,15 +97,129 @@ function tampilkan(id){
 <!-- MATERI -->
 <div id="materi" class="container section">
     <h2>Interpolasi Beda Bagi Newton</h2>
+
     <p>
-        Interpolasi Newton menggunakan tabel selisih hingga (divided differences)
-        untuk membangun polinom interpolasi.  
-        Rumus umumnya adalah:
+        Interpolasi Newton adalah metode untuk membangun polinom interpolasi 
+        berdasarkan tabel <b>beda bagi (divided difference)</b>. 
+        Metode ini cocok ketika titik-titik data tidak memiliki jarak yang sama.
     </p>
 
-    <p><b>P(x) = f[x₀] + f[x₀,x₁](x-x₀) + f[x₀,x₁,x₂](x-x₀)(x-x₁) + ...</b></p>
+    <h3>1. Konsep Dasar</h3>
+    <p>
+        Diberikan titik-titik data:
+        <br>
+        (x₀, f(x₀)), (x₁, f(x₁)), ..., (xₙ, f(xₙ))
+        <br><br>
+        Tujuan interpolasi adalah membuat polinom P(x) sehingga:
+        <br>
+        P(xᵢ) = f(xᵢ) untuk semua i.
+    </p>
 
-    <p>Materi lengkap dapat Anda kembangkan di bagian ini.</p>
+    <h3>2. Definisi Beda Bagi</h3>
+
+    <p><b>Beda bagi orde 0:</b></p>
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+f[x₀] = f(x₀)
+f[x₁] = f(x₁)
+...
+    </pre>
+
+    <p><b>Beda bagi orde 1:</b></p>
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+f[x₀, x₁] = ( f(x₁) - f(x₀) ) / ( x₁ - x₀ )
+    </pre>
+
+    <p><b>Beda bagi orde 2:</b></p>
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+f[x₀, x₁, x₂] = ( f[x₁, x₂] - f[x₀, x₁] ) / ( x₂ - x₀ )
+    </pre>
+
+    <p><b>Beda bagi orde ke-n:</b></p>
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+f[x₀, x₁, ..., xₙ] = ( f[x₁, ..., xₙ] - f[x₀, ..., xₙ₋₁] ) / ( xₙ - x₀ )
+    </pre>
+
+    <h3>3. Bentuk Umum Polinom Newton</h3>
+
+    <p>
+        Polinom Newton dalam bentuk <b>Newton maju</b> adalah:
+    </p>
+
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+P(x) = 
+f[x₀]
++ f[x₀,x₁](x - x₀)
++ f[x₀,x₁,x₂](x - x₀)(x - x₁)
++ ...
++ f[x₀,x₁,...,xₙ](x - x₀)(x - x₁)...(x - xₙ₋₁)
+    </pre>
+
+    <h3>4. Contoh Tabel Beda Bagi</h3>
+
+    <p>Misalkan tabel data:</p>
+
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+x : 1   2   4
+f : 1   4   16
+    </pre>
+
+    <p>Buat tabel beda bagi:</p>
+
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+     x     f(x)     Δ1             Δ2
+-------------------------------------------
+     1      1     (4-1)/(2-1)=3
+                  (16-4)/(4-2)=6
+
+                        Δ2 = (6 - 3)/(4 - 1) = 1
+-------------------------------------------
+     2      4
+-------------------------------------------
+     4      16
+    </pre>
+
+    <h3>5. Polinomnya</h3>
+
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+P(x) = f[x₀]
+     + f[x₀,x₁](x - x₀)
+     + f[x₀,x₁,x₂](x - x₀)(x - x₁)
+
+     = 1 + 3(x - 1) + 1(x - 1)(x - 2)
+    </pre>
+
+    <h3>6. Kelebihan Metode Beda Bagi Newton</h3>
+    <ul>
+        <li>Dapat digunakan untuk data dengan jarak tidak sama.</li>
+        <li>Penyusunan tabel sederhana dan sistematis.</li>
+        <li>Mudah menambah titik baru tanpa mengulang seluruh perhitungan.</li>
+        <li>Stabil secara numerik dibanding metode interpolasi lainnya.</li>
+    </ul>
+
+    <h3>7. Kekurangan</h3>
+    <ul>
+        <li>Masih sensitif terhadap banyak titik (Runge phenomenon).</li>
+        <li>Jika titik sangat rapat, beda bagi bisa menyebabkan pembulatan.</li>
+        <li>Polinom derajat tinggi tidak selalu representatif terhadap data asli.</li>
+    </ul>
+
+    <h3>8. Penggunaan dalam Komputasi (Algoritma)</h3>
+    <pre style="background:#eef;padding:12px;border-radius:8px;">
+1. Siapkan tabel x dan f(x)
+2. Hitung beda bagi orde 1, simpan kolom pertama
+3. Hitung beda bagi orde 2, simpan kolom pertama
+4. Lanjutkan hingga orde n
+5. Masukkan ke rumus Newton
+6. Evaluasi P(x)
+    </pre>
+
+    <h3>9. Kesimpulan</h3>
+    <p>
+        Interpolasi Beda Bagi Newton merupakan metode efektif,
+        fleksibel, dan sangat berguna dalam penyelesaian numerik
+        ketika titik-titik data tidak berjarak sama.
+    </p>
+
 </div>
 
 <!-- PENULIS -->
