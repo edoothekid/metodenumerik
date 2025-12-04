@@ -382,7 +382,7 @@ P(x) = f[x₀]
 
     <!-- Penulis 1 -->
     <div class="author-card">
-        <img src="author1.jpg" class="author-photo">
+        <img src="author1.jpg" alt="Foto Alfredho Fathurrahman Rizquna Ahmadi" class="author-photo">
         <div class="author-info">
             <h3>Alfredho Fathurrahman Rizquna Ahmadi</h3>
             <p>Mahasiswa Pendidikan Matematika – Universitas Sebelas Maret</p>
