@@ -2,68 +2,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing Page</title>
+<title>Metode Numerik • Futuristik</title>
 
 <style>
+    /* ---------------------------------------------------
+       GLOBAL STYLE — FUTURISTIC BLUE-PURPLE NEON
+    --------------------------------------------------- */
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #617BFF, #4E5DFF);
-        color: #111;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: radial-gradient(circle at top, #4e5dff, #1b1f3b 70%);
+        color: #fff;
+        min-height: 100vh;
+        overflow-x: hidden;
     }
 
-    /* NAVBAR */
+    /* Glow helpers */
+    .glow {
+        text-shadow: 0px 0px 10px #94a3ff;
+    }
+
+    /* ---------------------------------------------------
+       NAVBAR — FLOATING FUTURISTIC GLASS
+    --------------------------------------------------- */
     .navbar {
-        background: #ffffffdd;
-        backdrop-filter: blur(5px);
-        padding: 18px 50px;
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 92%;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.15);
+        border-radius: 16px;
+        padding: 18px 40px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }
-
-    .logo {
-        height: 40px;
+        z-index: 999;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.3);
     }
 
     .nav-right {
         display: flex;
-        gap: 30px;
+        gap: 35px;
         font-size: 18px;
         font-weight: 600;
     }
 
     .nav-right a {
-        color: #222;
+        color: #e6e9ff;
         text-decoration: none;
+        transition: 0.25s ease;
     }
 
     .nav-right a:hover {
-        color: #4E5DFF;
+        color: #aabaff;
+        text-shadow: 0 0 12px #aabaff;
     }
 
-    /* CONTENT WRAPPER */
+    /* ---------------------------------------------------
+       CONTAINER — GLASSMORPHIC FLOATING CARD
+    --------------------------------------------------- */
     .container {
         max-width: 1100px;
-        margin: 70px auto;
-        background: #ffffffee;
+        margin: 130px auto 60px auto;
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(15px);
         padding: 40px;
-        border-radius: 18px;
-        backdrop-filter: blur(3px);
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.15);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+        animation: fadeIn 0.6s ease both;
     }
 
-    /* SECTION HIDE + SHOW */
-    .section {
-        display: none;
-    }
+    /* Section active control */
+    .section { display: none; }
+    .section.active { display: block; }
 
-    .section.active {
-        display: block;
-    }
-
+    /* Headings */
     h2 {
-        color: #2d2da8;
-        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: 32px;
+        color: #dbe3ff;
+        font-weight: 700;
+        text-shadow: 0px 0px 8px #8899ff;
+    }
+
+    h3 {
+        color: #eef1ff;
+        margin-top: 25px;
+    }
+
+    p, ul, li {
+        font-size: 17px;
+        line-height: 1.6;
+        color: #eef2ff;
+    }
+
+    pre {
+        background: rgba(255,255,255,0.12);
+        border-left: 4px solid #8ea2ff;
+        padding: 14px;
+        border-radius: 10px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+    }
+
+    /* Animasi Fade */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to   { opacity: 1; transform: translateY(0); }
     }
 </style>
 
@@ -79,7 +128,7 @@ function tampilkan(id){
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <img src="logo.png" class="logo"> <!-- GANTI LOGO DI SINI -->
+    <div class="glow" style="font-size:26px; font-weight:700;">Metode Numerik</div>
 
     <div class="nav-right">
         <a href="#" onclick="tampilkan('home')">Home</a>
@@ -91,7 +140,11 @@ function tampilkan(id){
 <!-- HOME -->
 <div id="home" class="container section active">
     <h2>Selamat Datang</h2>
-    <p>Ini adalah landing page sederhana untuk pembelajaran metode numerik.</p>
+    <p>
+        Website pembelajaran <b>Metode Numerik</b> dengan desain futuristik.  
+        Gunakan menu di atas untuk menjelajahi materi, termasuk 
+        <i>Interpolasi Newton</i>, metode numerik lain, dan informasi penulis.
+    </p>
 </div>
 
 <!-- MATERI -->
@@ -225,8 +278,8 @@ P(x) = f[x₀]
 <!-- PENULIS -->
 <div id="penulis" class="container section">
     <h2>Tentang Penulis</h2>
-    <p>Nama: ——— (isi sendiri)</p>
-    <p>Mahasiswa/Profesi: ———</p>
+    <p>Nama: —————</p>
+    <p>Mahasiswa / Profesi: —————</p>
     <p>Deskripsi singkat mengenai pengalaman, bidang, dan kontak penulis.</p>
 </div>
 
