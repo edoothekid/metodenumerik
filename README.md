@@ -345,14 +345,46 @@ P(x) = f[x₀]
     </div>
 
     <!-- TENTANG PENULIS -->
-    <section id="penulis" class="section card" aria-labelledby="penulis-heading">
-        <h2 id="penulis-heading">Tentang Penulis</h2>
-        <p>Nama: ——— (isi sendiri)</p>
-        <p>Mahasiswa/Profesi: ———</p>
-        <p>Deskripsi singkat mengenai pengalaman, bidang, dan kontak penulis.</p>
-    </section>
+<section id="penulis" class="section card" aria-labelledby="penulis-heading">
+    <h2 id="penulis-heading">Tentang Penulis</h2>
 
-</main>
+    <!-- Penulis 1 -->
+    <div style="display:flex;align-items:center;gap:20px;margin-bottom:26px;">
+        <img src="https://api.dicebear.com/8.x/initials/svg?seed=Alfredho%20Fathurrahman%20Rizquna%20Ahmadi&backgroundColor=1e3a8a&fontColor=ffffff"
+             alt="Foto Alfredho"
+             style="width:90px;height:90px;border-radius:12px;border:1px solid rgba(110,168,255,0.25);box-shadow:0 6px 20px rgba(20,40,80,0.4);">
 
-</body>
-</html>
+        <div>
+            <p style="margin:0;font-size:20px;font-weight:700;color:#9cc2ff;">
+                Alfredho Fathurrahman Rizquna Ahmadi
+            </p>
+            <p style="margin:4px 0;color:#e9f4ff;">
+                Mahasiswa Pendidikan Matematika UNS
+            </p>
+            <p style="margin:0;color:#d1e6ff;">
+                Memiliki minat dalam pembelajaran matematika modern, pengembangan media digital,
+                serta integrasi teknologi dalam proses pembelajaran numerik.
+            </p>
+        </div>
+    </div>
+
+    <!-- Penulis 2 -->
+    <div style="display:flex;align-items:center;gap:20px;">
+        <img src="https://api.dicebear.com/8.x/initials/svg?seed=Galih%20Wicaksono&backgroundColor=1e3a8a&fontColor=ffffff"
+             alt="Foto Galih"
+             style="width:90px;height:90px;border-radius:12px;border:1px solid rgba(110,168,255,0.25);box-shadow:0 6px 20px rgba(20,40,80,0.4);">
+
+        <div>
+            <p style="margin:0;font-size:20px;font-weight:700;color:#9cc2ff;">
+                Galih Wicaksono
+            </p>
+            <p style="margin:4px 0;color:#e9f4ff;">
+                Mahasiswa Pendidikan Matematika UNS
+            </p>
+            <p style="margin:0;color:#d1e6ff;">
+                Fokus pada penelitian pembelajaran matematika, analisis data kuantitatif-kualitatif,
+                dan pengembangan materi ajar yang interaktif dan mudah diakses siswa.
+            </p>
+        </div>
+    </div>
+</section>
