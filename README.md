@@ -222,6 +222,8 @@
 <div class="navbar">
     <div class="logo">
         <div class="dot" aria-hidden="true"></div>
+        Metode Numerik
+    </div>
 
     <div class="nav-right" role="navigation" aria-label="Main navigation">
         <a href="#" onclick="tampilkan('home'); return false;">Home</a>
