@@ -392,7 +392,7 @@ P(x) = f[x₀]
 
     <!-- Penulis 2 -->
     <div class="author-card">
-        <img src="author2.jpg" class="author-photo">
+        <img src="author2.jpg" alt="Foto Galih Wicaksono" class="author-photo">
         <div class="author-info">
             <h3>Galih Wicaksono</h3>
             <p>Mahasiswa Pendidikan Matematika – Universitas Sebelas Maret</p>
