@@ -236,15 +236,27 @@
 <!-- MAIN -->
 <main class="main-wrap">
 
-    <!-- HOME -->
-    <section id="home" class="section card">
-        <h2>Selamat Datang</h2>
-        <p>
-            Ini adalah landing page futuristik untuk pembelajaran metode numerik,
-            berisi materi lengkap dan interaktif, disajikan dengan desain modern
-            dan mudah dipahami.
-        </p>
-    </section>
+        <!-- HOME -->
+        <section id="home" class="section card">
+            <h2>Selamat Datang</h2>
+            <p>
+                Landing page ini dibuat sebagai media pembelajaran untuk mata kuliah Metode Numerik 
+                dengan fokus pada materi interpolasi. Di dalamnya, pengguna diajak memahami cara kerja 
+                interpolasi melalui contoh yang dekat dengan kehidupan nyata, yaitu data jumlah penduduk 
+                pada sebuah kabupaten. Materi disusun agar mudah diikuti sehingga konsep yang awalnya terlihat 
+                rumit bisa terasa lebih masuk akal ketika dipelajari lewat data nyata.
+                <br><br>
+                Tampilan dan alurnya dibuat jelas serta nyaman untuk diikuti. Pengguna dapat membaca 
+                penjelasan materi, mencoba melakukan perhitungan interpolasi, dan melihat hasil visualisasinya 
+                secara langsung. Semua fitur disusun agar pembelajaran terasa lebih praktis sehingga pengguna 
+                tidak hanya membaca teori tetapi juga melihat bagaimana langkah perhitungannya berjalan.
+                <br><br>
+                Secara keseluruhan, halaman ini membantu mahasiswa memahami bagaimana interpolasi digunakan 
+                untuk memperkirakan nilai yang belum diketahui berdasarkan data yang tersedia. Pembelajaran 
+                dibuat sederhana tanpa kesan terlalu teknis sehingga pengguna bisa langsung fokus pada inti 
+                materi dan memahami manfaat metode numerik dalam analisis data.
+            </p>
+        </section>
 
     <!-- MATERI (100% verbatim — saya tidak mengubah isi ini sama sekali) -->
     <!-- MATERI -->
