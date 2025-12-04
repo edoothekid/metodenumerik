@@ -10,15 +10,15 @@
        GLOBAL: DARK FUTURISTIC (A)
        --------------------------- */
     :root{
-        --bg-1: #071028;   /* very dark navy */
-        --bg-2: #0b1a3a;   /* deep blue */
-        --card: rgba(10,18,35,0.72);
-        --accent: #6ea8ff; /* neon blue */
+        --bg-1: #071028;
+        --bg-2: #0b1a3a;
+        --card: rgba(8,12,28,0.72);
+        --accent: #6ea8ff;
         --accent-2: #9cc2ff;
         --muted: #cfe6ff;
         --text: #e9f4ff;
-        --pre-bg: rgba(6,12,30,0.8);
-        --pre-border: rgba(110,168,255,0.18);
+        --pre-bg-dark: #071427;
+        --pre-border-dark: rgba(110,168,255,0.12);
     }
 
     html,body{
@@ -148,34 +148,30 @@
 
     ul { padding-left: 18px; }
 
-    /* ---------- PRE (readable, neon accent) ---------- */
+    /* ---------- PRE (override inline styles to guarantee readability) ---------- */
     pre, .code-box {
-        background: var(--pre-bg);
-        color: #dff6ff; /* readable light cyan */
-        padding: 14px 16px;
-        border-radius: 10px;
-        border: 1px solid var(--pre-border);
+        background: var(--pre-bg-dark) !important;
+        color: #dff6ff !important; /* readable light cyan */
+        padding: 14px 16px !important;
+        border-radius: 10px !important;
+        border: 1px solid var(--pre-border-dark) !important;
         box-shadow: 0 6px 18px rgba(15,30,60,0.5), 0 0 18px rgba(110,168,255,0.04) inset;
         overflow-x: auto;
-        white-space: pre-wrap;
+        white-space: pre-wrap !important;
         font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
         font-size: 14px;
         line-height:1.55;
     }
 
-    /* make inline bolds stand out */
+    /* keep any inline <pre style="..."> visually overridden by !important rules above */
+
     b { color: #e9f6ff; font-weight:700; }
 
-    /* small helper spacing for sections */
-    .spacer { height:18px; }
-
-    /* responsive */
     @media (max-width:720px){
         .nav-right { gap:14px; font-size:15px; }
         .main-wrap { width:95%; margin-top: 22px; padding:0 8px; }
         h2 { font-size:22px; }
     }
-
 </style>
 
 <script>
@@ -183,10 +179,8 @@
         document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
         var el = document.getElementById(id);
         if(el) el.classList.add('active');
-        // scroll to top of main-wrap for better UX on mobile
         setTimeout(() => { window.scrollTo({ top: 0, behavior: 'smooth' }); }, 80);
     }
-    // set default active on load
     window.addEventListener('DOMContentLoaded', function(){
         tampilkan('home');
     });
@@ -221,9 +215,10 @@
         </p>
     </section>
 
-    <!-- MATERI (TEKS PERSIS SESUAI PERMINTAAN ANDA) -->
-    <section id="materi" class="section card" aria-labelledby="materi-heading">
-        <h2 id="materi-heading">Interpolasi Beda Bagi Newton</h2>
+    <!-- MATERI (100% verbatim — saya tidak mengubah isi ini sama sekali) -->
+    <!-- MATERI -->
+    <div id="materi" class="container section card">
+        <h2>Interpolasi Beda Bagi Newton</h2>
 
         <p>
             Interpolasi Newton adalah metode untuk membangun polinom interpolasi 
@@ -245,24 +240,24 @@
         <h3>2. Definisi Beda Bagi</h3>
 
         <p><b>Beda bagi orde 0:</b></p>
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
 f[x₀] = f(x₀)
 f[x₁] = f(x₁)
 ...
         </pre>
 
         <p><b>Beda bagi orde 1:</b></p>
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
 f[x₀, x₁] = ( f(x₁) - f(x₀) ) / ( x₁ - x₀ )
         </pre>
 
         <p><b>Beda bagi orde 2:</b></p>
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
 f[x₀, x₁, x₂] = ( f[x₁, x₂] - f[x₀, x₁] ) / ( x₂ - x₀ )
         </pre>
 
         <p><b>Beda bagi orde ke-n:</b></p>
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
 f[x₀, x₁, ..., xₙ] = ( f[x₁, ..., xₙ] - f[x₀, ..., xₙ₋₁] ) / ( xₙ - x₀ )
         </pre>
 
@@ -272,7 +267,7 @@ f[x₀, x₁, ..., xₙ] = ( f[x₁, ..., xₙ] - f[x₀, ..., xₙ₋₁] ) / (
             Polinom Newton dalam bentuk <b>Newton maju</b> adalah:
         </p>
 
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
 P(x) = 
 f[x₀]
 + f[x₀,x₁](x - x₀)
@@ -285,14 +280,14 @@ f[x₀]
 
         <p>Misalkan tabel data:</p>
 
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
 x : 1   2   4
 f : 1   4   16
         </pre>
 
         <p>Buat tabel beda bagi:</p>
 
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
      x     f(x)     Δ1             Δ2
 -------------------------------------------
      1      1     (4-1)/(2-1)=3
@@ -307,7 +302,7 @@ f : 1   4   16
 
         <h3>5. Polinomnya</h3>
 
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
 P(x) = f[x₀]
      + f[x₀,x₁](x - x₀)
      + f[x₀,x₁,x₂](x - x₀)(x - x₁)
@@ -331,7 +326,7 @@ P(x) = f[x₀]
         </ul>
 
         <h3>8. Penggunaan dalam Komputasi (Algoritma)</h3>
-        <pre class="code-box">
+        <pre style="background:#eef;padding:12px;border-radius:8px;">
 1. Siapkan tabel x dan f(x)
 2. Hitung beda bagi orde 1, simpan kolom pertama
 3. Hitung beda bagi orde 2, simpan kolom pertama
@@ -346,7 +341,8 @@ P(x) = f[x₀]
             fleksibel, dan sangat berguna dalam penyelesaian numerik
             ketika titik-titik data tidak berjarak sama.
         </p>
-    </section>
+
+    </div>
 
     <!-- TENTANG PENULIS -->
     <section id="penulis" class="section card" aria-labelledby="penulis-heading">
